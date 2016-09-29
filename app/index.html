@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+	<head>
+		<meta charset="utf-8" />
+		<title>投票主题</title>
+	    <!-- Required meta tags always come first -->
+	    <meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">	
+	    <meta name="viewport" content=" user-scalable=no">
+		<!--图标样式-->
+		<link rel="stylesheet" href="css/font-awesome.css" />		
+		<!--投票样式-->
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		
+		<!--评论需要登录-->
+		<div class="prompt-box" id="loginBox">
+			<div class="text-pink">嗨！登录之后才能吐槽哦 </div>
+			<div><small>第三方登录</small></div>
+			<div class="prompt-box-btn">
+				<a  class="qq">
+					<img src="img/QQ.png" width="70">
+					<br>
+					QQ
+					<span id="qqbox"></span>
+				</a>
+				<a class="xl" >
+					<img src="img/XL.png" width="70">
+					<br>
+					新浪
+					<span id="wb_connect_btn"></span>
+				</a>
+			</div>
+			<p class="main-foot-share-times"   id="loginTimesBtn">
+				取消
+			</p>			
+		</div>
+		<div class="prompt-box-h"></div>
+		<!--分享-->
+		<div class="prompt-box main-foot-share-box" id="shareBox">
+				<div class="text-pink BSHARE_POP">分享  · 是我的态度 </div>
+				<div><small>分享文章</small></div>
+				
+				<div class="prompt-box-btn">
+					<a onclick="javascript:bShare.share(event,'sinaminiblog',0);return false;" class="">
+						<img src="img/xL.png" width="60">
+						<br>
+						新浪微博
+					</a>
+					<a onclick="javascript:bShare.share(event,'qzone',0);return false;" class="">
+						<img src="img/Qzone.png" width="60">
+						<br>
+						QQ空间
+					</a>
+					<a onclick="copyBtn()" class="">
+						<img src="img/copy.png" width="60">
+						<br>
+						复制
+					</a>
+				</div>
+			<div style="border-top: 1px solid #DCDCDC;">
+				<p class="text-pink">关于  · 我们 </p>
+				<div class="prompt-box-btn">
+					<a  class="">
+						广州微信公众号
+						<br>
+						<small>微信公众号</small>
+					</a>
+					<a class="">
+						BAIDU.com
+						<br>
+						<small>应用下载</small>
+					</a>
+					<a class="">
+						BAIDU.com
+						<br>
+						<small>合作方式</small>
+					</a>				
+				</div>
+			</div>
+			<p class="main-foot-share-times"   id="timesBtn">
+				取消
+			</p>
+		</div>
+
+		<!--投票开始-->
+		<div class="container" style="height:100% ;overflow: hidden;">
+			<!--投票头部-->
+			<div class="main-head">
+				<!--甲方-->
+				<div class="main-a">
+					<div style="padding: 20px;">
+						<div class="main-img">
+							<img src="img/y.png" width="100%">
+						</div>
+						 <div class="main-progressbar">
+						 	<div class="main-progressbar-su"></div>
+						 	<span class="main-progressbar-data">9098890</span>
+						 </div>
+						 <div class="main-btn bg-blue" href="">为他而<span>战</span></div>
+					</div>
+				</div>
+				<!--乙方-->
+				<div class="main-b">
+					<div style="padding: 20px;">
+						<div class="main-img">
+							<img src="img/j.png" width="100%">
+						</div>
+						 <div class="main-progressbar">
+						 	<div class="main-progressbar-su"></div>
+						 	<span class="main-progressbar-data">9098890</span>
+						 </div>
+						 <div class="main-btn bg-pink" href="">为他而<span>战</span></div>
+					</div>
+				</div>
+				<div class="clear"></div>	
+				<!--vs-->
+				<img src="img/vs.png" class="main-vs">
+			</div>
+			<!--投票聊天-->
+			<div class="main-body" style="height:38rem">
+				<div class="main-dialog">
+					<img src="img/j.png" class="main-dialog-logo">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，人呢，
+							我告你，漂亮的女人要不得啊<br>
+							......
+						</div>						
+					</div>
+				</div>
+				<div class="main-dialog">
+					<img src="img/j.png" class="main-dialog-logo">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，人呢，
+						</div>						
+					</div>
+				</div>
+				<div class="main-dialog">
+					<img src="img/j.png" class="main-dialog-logo">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，人呢，
+							......
+						</div>						
+					</div>
+				</div>
+				<div class="main-dialog ">
+					<img src="img/j.png" class="main-dialog-logo">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，人呢，我告你，漂亮的女人要不得啊我告你，漂亮的女人要不得啊我告你，漂亮的女人要不得啊我告你，漂亮的女人要不得啊我告你，漂亮的女人要不得啊
+							我告你，漂亮的女人要不得啊
+							......
+						</div>					
+					</div>	
+				</div>
+				<div class="main-dialog main-dialog-me">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，你说你咋
+						</div>						
+					</div>
+					<img src="img/j.png" class="main-dialog-logo">
+				</div>
+				<div class="main-dialog main-dialog-me">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，你说你咋
+						</div>						
+					</div>
+					<img src="img/j.png" class="main-dialog-logo">					
+				</div>				
+				<div class="main-dialog main-dialog-me">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，你说你咋
+						</div>						
+					</div>
+					<img src="img/j.png" class="main-dialog-logo">
+				</div>
+				<div class="main-dialog main-dialog-me">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟啊，你说你咋
+						</div>						
+					</div>
+					<img src="img/j.png" class="main-dialog-logo">
+				</div>
+				<div class="main-dialog main-dialog-me">
+					<div class="main-dialog-body">
+						<h3>样子</h3>
+						<div class="main-dialog-tit">
+							宝强兄弟
+						</div>						
+					</div>
+					<img src="img/j.png" class="main-dialog-logo">
+				</div>				
+			</div>
+			<!--操作区域-->
+			<div class="main-foot">
+				<div class="main-foot-vs">
+					<span class="main-btn btn  bg-pink" id="pkBtn">战场</span>
+				</div>
+				<div class="main-foot-appraise">
+					<div>
+						<span   class="btn" id="evaluateBtn">甲评价</span><span  class="btn" id="propBtn">甲道具</span><span   class="btn" >乙评论</span><span  class="btn" >乙道具</span>						
+					</div>
+						
+					<!--评价文本框-->
+					<div class="main-foot-evaluatebox" id="evaluateBox" >
+<!--						<div class="main-foot-jalist">
+							<a>甲方</a>
+							<a>乙方</a>
+						</div>-->
+						<div class="main-foot-evaluate">
+							<div class="main-handle">
+								<span class="send" id="evaluate-send">发送</span>
+								<span  id="evaluate-close">取消</span>
+							</div>
+							<div style="clear: both;"></div>
+							<textarea  rows="6" placeholder="(*^__^*)评论写的屌一点，人生更精彩一点">
+							</textarea>							
+						</div>
+					<!--道具-->
+						<div class="main-foot-prop" id="propBox">
+							<div class="prop-tab">
+								<span class="s tab-span">补血</span><span class="tab-span">掉血</span><span class="tab-span">耍帅</span>
+								<span class="close" id="prop-close">取消</span>
+							</div>
+							<ul style="display: block;">
+								<li>
+									<div>
+										<img src="img/prop/面包.gif" width="40">
+										<span>面包</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/QQ.png" width="40">
+										<span>黄瓜</span>
+									</div>
+								</li>
+								
+							</ul>
+							<ul>
+								<li>
+									<div>
+										<img src="img/prop/面包.gif" width="40">
+										<span>耍酷面包</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/QQ.png" width="40">
+										<span>黄瓜</span>
+									</div>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<div>
+										<img src="img/prop/面包.gif" width="40">
+										<span>点赞</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/prop/gz.png" width="40" title="gz">
+										<span>鼓掌</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/prop/lh.png" width="40" title="lh">
+										<span>烟花</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/QQ.png" width="40">
+										<span>魔法棒</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/prop/pc.png" width="40" title="pc">
+										<span>跑车</span>
+									</div>
+								</li>									
+							</ul> 
+						</div>	
+					</div>
+				</div>
+				<div class="main-foot-share">
+					<span class="text-pink" id="shareBtn"><i class="fa fa-share-alt fs-18"></i></span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<!--qq登录-->
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="1105648097" charset="utf-8"></script>
+	<!--新浪微博登录-->
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=YOUR APPKEY&debug=true" type="text/javascript" charset="utf-8"></script>
+	<!--分享-->
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=<你的UUID>&style=-1"></script> 
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=bsharesync,qzone,renren,sinaminiblog,kaixin001&text=快来分享吧"></script>	
+	<!--道具效果-->
+	<script type="text/javascript" src="js/swfobject.js" ></script>	
+	<script type="text/javascript">
+		//qq登录
+		QC.Login({
+			btnId:"qqbox"	//插入按钮的节点id
+		});
+		//回调	
+		var paras = {};
+		QC.api("get_user_info", paras)
+			.success(function(s){//成功回调
+				alert("获取用户信息成功！当前用户昵称为："+s.data.nickname);
+			})
+			.error(function(f){//失败回调
+				alert("获取用户信息失败！");
+			})
+			.complete(function(c){//完成请求回调
+				alert("获取用户信息完成！");
+			});
+		
+		//新浪登录
+		WB2.anyWhere(function (W) {
+		    W.widget.connectButton({
+		        id: "wb_connect_btn",
+		        type: '3,2',
+		        callback: {
+		            login: function (o) { //登录后的回调函数
+		                alert("login: " + o.screen_name)
+		            },
+		            logout: function () { //退出后的回调函数
+		                alert('logout');
+		            }
+		        }
+		    });
+		});	
+		
+		//分享
+		bShare.addEntry({
+		    title: "分享的标题，默认为当前页面标题",
+		  /*  url: "分享的链接，默认为当前页面URL",*/
+		    summary: "分享的文本摘要，默认为页面Meta标签中description的内容或者用户高亮的内容"
+		    /*pic: "指定分享的图片的链接，目前支持新浪微博，QQ空间，搜狐微博，网易微博，人人网， 嘀咕，腾讯微博和做啥。"*/
+		});		
+		
+
+		var ip="192.168.1.103/toupiao/";
+		var imgurl="img/prop/";
+		var swfurl="img/swf/";
+		
+		//是否登录 
+		var success=true
+		function loginShow(){
+			if(success==true){
+				$("#loginBox").css("display","none");
+				$(".prompt-box-h").css("display","none");		
+				return true
+			}else{
+				$("#loginBox").css("display","block");
+				$(".prompt-box-h").css("display","block");
+				return false
+			}			
+		}
+	
+		//滚动聊天窗口
+		var wh=	$(document.body).height(),
+			mh=$(".main-head").height(),
+		 	mf=$(".main-foot").height(),
+		 	mb=wh-mh-mf-230;
+		//设置滚动聊天窗口高度
+		$(".main-body").height(mb*0.0625+"rem")
+		
+		//显示评价或者是道具
+		var open=false;
+		function evaluatePropShow(a,b){
+			if(a.css("bottom")=="7rem"){
+				a.animate({
+				 	bottom:"-14rem"
+				},200);	
+				b.animate({
+				 	bottom:"7rem"
+				},200);					
+			}else if(b.css("bottom")=="7rem"){
+				b.animate({
+				 	bottom:"-14rem"
+				},200);				
+			}else{
+				/*console.log(a.css("bottom"))*/
+				b.animate({
+				 	bottom:"7rem"
+				},200);	
+				open=true;
+			}		
+		}
+		
+		//评价
+		$("#evaluateBtn").click(function(e){
+			e.stopPropagation()
+			var isSuccess = loginShow();
+			if(isSuccess){
+				evaluatePropShow($("#propBox"),$(".main-foot-evaluate"))
+			}else{
+			}			
+		})
+		$("#evaluate-close").click(function(){
+			$(".main-foot-evaluate").animate({
+			 	bottom:"-14rem"
+			},200);				
+		})		
+		
+		//道具
+		$("#propBtn").click(function(e){
+			e.stopPropagation()
+			var isSuccess = loginShow();
+			if(isSuccess){
+				evaluatePropShow($(".main-foot-evaluate"),$("#propBox"))	
+			}else{
+			}
+		})	
+		
+		$(".prop-tab .tab-span").each(function(i,j){
+			$(this).click(function(){
+				$(".prop-tab .tab-span").removeClass("s")
+				$(this).addClass("s")
+				$(".main-foot-prop ul").each(function(a,b){
+					$(".main-foot-prop ul").css({"display":"none"})
+					$($(".main-foot-prop ul")[i]).css({"display":"block"})
+				})
+			})
+		})
+		
+		$("#prop-close").click(function(){
+			$("#propBox").animate({
+			 	bottom:"-14rem"
+			},200);				
+		})
+		
+		//道具评价 关闭
+/*		window.addEventListener("click",function(e){
+			if(open==true){
+				$(".main-foot-evaluate").animate({
+				 	bottom:"-14rem"
+				},200);
+				$("#propBox").animate({
+				 	bottom:"-14rem"
+				},200);		
+				open==false
+			}
+		})	*/		
+		
+		//战场pK 页面跳转
+		$("#pkBtn").click(function(){
+			if(success==true){
+				$("#loginBox").css("display","none");
+				$(".prompt-box-h").css("display","none");				
+				window.location.href=ip+"pklist.html"
+			}else{
+				$("#loginBox").css("display","block");
+				$(".prompt-box-h").css("display","block");
+			}
+		})
+		//战场pK 取消
+		$("#loginTimesBtn").click(function(){
+			$("#loginBox").css("display","none");
+			$(".prompt-box-h").css("display","none");
+		})
+		
+		//分享 打开
+		$("#shareBtn").click(function(){
+			var isSuccess = loginShow();
+			if(isSuccess){
+				$("#shareBox").css("display","block");
+				$(".prompt-box-h").css("display","block");
+			}else{
+			}
+		})
+			//分享 关闭
+		$("#timesBtn").click(function(){
+			$("#shareBox").css("display","none");
+			$(".prompt-box-h").css("display","none");
+		})
+		
+		//复制
+		function copyBtn(){
+			alert("长按复制 图标!");
+		}
+		
+		
+		//道具 特效
+		$.each($("#propBox ul li"), function() {
+			$(this).click(function(){
+				var swfname=$(this).find("img").attr("title");
+				var swfurlb=swfurl+swfname
+				$("body").append("<div class='main-special' style='width:100%;height:100%' id='swfid'></div>")
+				$("#swfid").animate({
+				 	opacity:"1"
+				},1500,function(){
+					$(this).animate({
+					 	opacity:"0"
+					},1500,function(){
+						$("#swfid").remove()
+					});					
+				});					 
+				 var params = {};
+				     params.wmode = "transparent";
+					 swfobject.embedSWF(swfurlb+'.swf', 'swfid', '100%','100%', '9.0.0', 'expressInstall.swf',null,params)
+/*				var imgname=$(this).find("span").text()
+				var imgurlb=imgurl+imgname
+				$("body").append("<div class='main-special'><img src='"+imgurlb+".gif'></div>")
+				$(".main-b").append("<div class='main-special-b'> <img src='"+imgurlb+".gif'></div>")
+				$(".main-special img").animate({
+				 	width:"500px",
+				},400,function(){
+					$(this).animate({
+					 	opacity:"0",
+					},400,function(){
+						$(".main-special").remove()
+						
+						$(".main-special-b img").animate({ 
+							width:"0",
+							opacity:"0"
+							},1800,function(){
+							$(".main-special-b").remove();
+						});								
+					});					
+				});*/
+			})
+		});
+
+	</script>
+</html>
