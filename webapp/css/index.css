@@ -1,0 +1,567 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373a3c;
+  background-color: #fff;
+}
+ul li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.clear {
+  clear: both;
+}
+.fs-18 {
+  font-size: 3rem;
+}
+.fs-16 {
+  font-size: 2rem;
+}
+.bg-blue {
+  background: #4fa7d0;
+}
+.bg-pink {
+  background: #ff4081;
+}
+.text-pink {
+  color: #ff4081;
+}
+.text-red {
+  color: #ff4081;
+}
+.text-right {
+  text-align: right;
+}
+.box-shadownone,
+.main-btn.box-shadownone {
+  -moz-box-shadow: 0.0625rem 0.0625rem 0.3125rem #5f5f5f;/* 老的 Firefox */
+  box-shadow: none;
+}
+.main-head {
+  position: relative;
+  -moz-box-shadow: 0px 0.0625rem 0.3125rem #ccc;/* 老的 Firefox */
+  box-shadow: 0px 0.0625rem 0.4125rem #ccc;
+}
+.main-vs {
+  width: 6.8125rem;
+  position: absolute;
+  left: 44%;
+  top: 35%;
+  z-index: 1;
+  border-radius: 50%;
+  -moz-box-shadow: 0px 0.0625rem 0.3125rem #ccc;/* 老的 Firefox */
+  box-shadow: 0px 0.0625rem 0.4125rem #ccc;
+}
+.main-a,
+.main-b {
+  float: left;
+  width: 50%;
+  padding-top: 3.6875rem;
+  padding-bottom: 1rem;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.main-a:after,
+.main-b:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0px;
+  z-index: -2;
+}
+.main-a:after {
+  left: 0px;
+  border-bottom: 300px solid transparent;
+  border-left: 300px solid #86c2de;
+}
+.main-b:after {
+  right: 0px;
+  border-bottom: 300px solid transparent;
+  border-right: 300px solid #fda0bf;
+}
+.main-a:before,
+.main-b:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+.main-a:before {
+  left: 0px;
+  background: url(../img/bg-l.png) no-repeat;
+}
+.main-b:before {
+  background: url(../img/bg-r.png) no-repeat;
+}
+.main-img {
+  width: 10.75rem;
+  margin: auto;
+  margin-bottom: 2.8125rem;
+}
+.main-img img {
+  border-radius: 0.3125rem;
+  border: 0.2rem solid rgba(255, 255, 255, 0.6);
+}
+.main-progressbar {
+  width: 14.375rem;
+  background: #FFFFFF;
+  border-radius: 0.9375rem;
+  height: 0.75rem;
+  margin: 2rem auto;
+  position: relative;
+  -moz-box-shadow: 0.0625rem 0.0625rem 0.3125rem #5f5f5f;/* 老的 Firefox */
+  box-shadow: 0.0625rem 0.0625rem 0.3125rem #5f5f5f;
+}
+.main-progressbar-su {
+  background: #2ace19;
+  border-radius: 0.9375rem;
+  height: 0.625rem;
+  left: 0.0625rem;
+  top: 0.0625rem;
+  width: 6.25rem;
+  position: absolute;
+  box-shadow: 0 0 0.25rem #fff inset;
+  -moz-box-shadow: 0 0 0.25rem #fff inset;
+}
+.main-progressbar-data {
+  position: absolute;
+  right: -98px;
+  top: -10px;
+  color: #2ace19;
+  font-size: 1.2rem;
+}
+.main-b .main-progressbar-data {
+  left: -98px;
+  right: initial;
+}
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.75rem;
+  color: #FFFFFF;
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-size: 1.6rem;
+  -moz-box-shadow: 0.0625rem 0.0625rem 0.3125rem #aaaaaa;/* 老的 Firefox */
+  box-shadow: 0.0625rem 0.0625rem 0.3125rem #aaaaaa;
+}
+.main-btn span {
+  font-size: 2rem;
+}
+.main-body {
+  overflow: auto;
+  padding: 2.0625rem 2.0625rem;
+}
+.main-dialog {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-flow: row;
+}
+.main-dialog-logo {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 50%;
+}
+.main-dialog-body {
+  padding-left: 1.0625rem;
+  width: initial;
+}
+.main-dialog-body h3 {
+  font-size: 1.3 rem;
+  margin: 0;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: #ccc;
+}
+.main-dialog-tit {
+  border-radius: 0.3125rem;
+  padding: 0.5rem 0.6rem;
+  background: #f8f8f8;
+  color: #555;
+  font-size: 1.5rem;
+}
+.main-dialog-me {
+  justify-content: flex-end;
+}
+.main-dialog-me h3 {
+  text-align: right;
+}
+.main-dialog-me .main-dialog-body {
+  padding-left: 0;
+  padding-right: 2%;
+}
+.main-foot {
+  height: 3.1875rem;
+  padding: 2.0625rem;
+  position: relative;
+}
+.main-foot-vs,
+.main-foot-share {
+  float: left;
+  width: 16%;
+}
+.main-foot-share {
+  text-align: right;
+}
+.main-foot-appraise {
+  float: left;
+  width: 64%;
+  text-align: center;
+}
+.main-foot-appraise span.btn,
+.main-foot span.btn {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.6rem;
+  -moz-box-shadow: 0.0625rem 0.0625rem 0.3125rem #aaaaaa;/* 老的 Firefox */
+  box-shadow: 0.0625rem 0.0625rem 0.3125rem #aaaaaa;
+  background: #ff4081;
+  margin: 0;
+}
+.main-foot-appraise span.btn:first-child {
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  border-right: 0.0625rem solid #fff;
+  padding: 0.625rem 1.5rem;
+}
+.main-foot-appraise span.btn:last-child {
+  padding: 0.625rem 1.5rem;
+  border-left: 0.0625rem solid #fff;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+.prompt-box-h {
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+.prompt-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  font-size: 1.8rem;
+  z-index: 9999;
+  display: none;
+  padding: 0.625rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+.prompt-box-btn {
+  text-align: center;
+  margin: 2rem 0;
+}
+.prompt-box-btn img {
+  border-radius: 50%;
+  border: 1rem solid #fff;
+  -moz-box-shadow: 0px 0.0625rem 0.3125rem #ccc;/* 老的 Firefox */
+  box-shadow: 0px 0.0625rem 0.4125rem #ccc;
+}
+.prompt-box-btn a {
+  text-align: center;
+  margin: 0 2.5rem;
+  color: #555;
+  font-size: 1.4rem;
+  position: relative;
+  display: inline-block;
+}
+.prompt-box-btn a.qq span a,
+.prompt-box-btn a.xl span a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+.main-handle span {
+  padding: 0.625rem 1.75rem;
+  display: inline-block;
+  color: #fff;
+  float: right;
+  font-size: 1.4rem;
+}
+.main-handle span.send {
+  padding: 0.625rem 1.75rem;
+  display: inline-block;
+  background: #ff4081;
+  color: #fff;
+}
+.main-foot-evaluatebox .main-foot-evaluate,
+.main-foot-evaluatebox .main-foot-prop {
+  position: absolute;
+  bottom: -16rem;
+  right: 0;
+  left: 0;
+  margin: 0 2.0625rem;
+}
+.main-foot-evaluatebox .main-foot-evaluate {
+  background: rgba(0, 0, 0, 0.4);
+}
+.main-foot-evaluatebox .main-foot-evaluate textarea {
+  border-radius: 0.3125rem;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  border: none;
+  color: #fff;
+  padding: 0;
+  width: 100%;
+  height: 10rem;
+}
+.main-foot-jalist a {
+  display: block;
+  padding: 0.625rem 1.75rem;
+  background: #005B89;
+}
+.main-foot-evaluatebox .main-foot-prop div.prop-tab {
+  padding: 0;
+}
+.prop-tab {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.prop-tab span.tab-span {
+  padding: 0.625rem 1.75rem;
+  display: inline-block;
+}
+.prop-tab span.s {
+  padding: 0.625rem 1.75rem;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+}
+.prop-tab span.close {
+  float: right;
+  display: block;
+  padding: 0.625rem 1.75rem;
+  font-size: 1.4rem;
+}
+.main-foot-evaluatebox .main-foot-prop {
+  border-radius: 0.3125rem;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: left;
+}
+.main-foot-evaluatebox .main-foot-prop ul {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 0.625rem;
+  display: none;
+}
+.main-foot-evaluatebox .main-foot-prop li {
+  display: inline-block;
+}
+.main-foot-evaluatebox .main-foot-prop img {
+  vertical-align: bottom;
+}
+.main-foot-evaluatebox .main-foot-prop div {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+}
+.main-foot-share-box {
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.main-foot-share-times {
+  color: #ccc;
+  font-size: 1.6rem;
+  border-top: 1px solid #DCDCDC;
+  vertical-align: middle;
+  margin: 0;
+  padding: 2rem 0;
+}
+.main-pk-head {
+  position: fixed;
+  padding: 1rem 0;
+  z-index: 999;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+}
+.main-pk-head img {
+  width: 4rem;
+  max-width: 100%;
+  margin: 0 0.625rem;
+  vertical-align: middle;
+}
+.main-pk-head h1 {
+  display: inline-block;
+  margin: 0 2.5rem;
+  vertical-align: middle;
+}
+.main-pk-head .main-pk-head-of {
+  float: right;
+  padding: 1.2rem 0.625rem;
+  color: #ccc;
+}
+.main-pk-list {
+  margin-bottom: 2rem;
+}
+.main-pk-list .main-a,
+.main-pk-list .main-b {
+  padding-top: 1rem;
+}
+.main-pk-list .main-img {
+  margin-bottom: 0;
+}
+.main-pk-list .main-pk-tit {
+  padding: 1rem;
+  text-align: center;
+  background: rgba(242, 242, 242, 0.98);
+  font-size: 1.4rem;
+}
+.main-pk-list-no .main-a,
+.main-pk-list-no .main-b {
+  background: #ccc;
+}
+.main-pk-list-no .main-a:before,
+.main-pk-list-no .main-b:before,
+.main-pk-list-no .main-a:after,
+.main-pk-list-no .main-b:after {
+  height: 0;
+  background: none;
+  border: none;
+}
+.main-special {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.main-special-b {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 99999999999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.main-news-head {
+  text-align: center;
+}
+.main-head-newslist {
+  padding: 1rem;
+  background: rgba(242, 242, 242, 0.98);
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.main-head-newslist .main-title {
+  font-size: 2rem;
+  margin: 0.1rem 0;
+  color: #ff4081;
+}
+.main-head-newslist .main-title small {
+  color: #555;
+  font-size: 1.4rem;
+}
+.main-head-newslist .main-open {
+  text-align: right;
+}
+.main-head-newslist .main-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+}
+.main-head-newslist .main-content.active {
+  line-clamp: 20;
+  -webkit-line-clamp: 20;
+}
+@media (min-width: 34em) {
+  html {
+    font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .main-pk-head {
+    width: 100%;
+  }
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .main-pk-head {
+    width: 100%;
+  }
+}
+object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+@media (min-width: 62em) {
+  html {
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .container {
+    max-width: 60rem;
+    margin: auto;
+  }
+  .main-pk-head {
+    width: 60rem;
+    margin: auto;
+  }
+}
+@media (min-width: 75em) {
+  html {
+    font-size: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .container {
+    max-width: 72.25rem;
+    margin: auto;
+  }
+  .main-pk-head {
+    width: 72.25rem;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=index.css.map */

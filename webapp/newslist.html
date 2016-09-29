@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>投票主题</title>
+	    <!-- Required meta tags always come first -->
+	    <meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content=" user-scalable=no">
+		<!--图标样式-->
+		<link rel="stylesheet" href="css/font-awesome.css" />		
+		<!--投票样式-->
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<!--pk列表开始-->
+		<div class="container" style="height:100% ;overflow: hidden;">
+			<div class="main-pk-head main-news-head">
+<!--				<img src="img/QQ.png">
+				<h1>PK 擂台</h1>	-->
+				<h1>王宝强最新离婚案件</h1>
+				<a href="index.html" class="main-pk-head-of">取消</a>
+			</div>
+			<!--pk列表-->
+			<div style=" padding:3rem;padding-top:6rem ;">
+				<div class="main-head main-head-newslist">
+					<h3 class="main-title">添加收藏功能中的信息单个效果 <small>2016-09-09 12:30</small></h3>
+					<div class="main-content">
+						添加收藏功能中的信息单个和批
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和
+						添加收藏功能中的信息单个和量删除的效果添加收藏功能中的信息单个和批量删除的效果添加收藏功能中的信息单个和批量删除的效果添加收藏功能中的信息单个和批量删除的效果
+					</div>
+					<div class="main-open"><small>更多</small></div>
+				</div>
+				<div class="main-head main-head-newslist">
+					<h3 class="main-title">添加收藏功能中的量删除的效果 <small>2016-09-09 12:30</small></h3>
+					<div class="main-content">
+						添加收藏功能中的信息单个和批量删除的效果添加收藏功能中的信息单个和批量删除的效果添加收藏功能中的信息单个和批量删除的效果添加收藏功能中的信息单个和批量删除的效果
+					</div>
+					<div class="main-open"><small>更多</small></div>
+				</div>				
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		var ip="192.168.1.103/toupiao/"
+		//下拉筛新更多
+		
+		//点击打开相对应的链接
+		$.each($(".main-pk-list"),function(){
+			$(this).click(function(){
+				window.location.href=ip+"index.html"
+			})
+		})
+
+		//点击打开相对应的链接
+		$.each($(".main-open"),function(){
+			$(this).click(function(){
+				if($(this).siblings(".main-content").hasClass("active")){
+					$(this).siblings(".main-content").removeClass("active")
+				}else{
+					$(this).siblings(".main-content").addClass("active")
+				}
+			})
+		})
+	</script>
+</html>
